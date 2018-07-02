@@ -42,6 +42,15 @@ function createCards() {
   }
 }
 
+function createCards2() {
+  for (var i = 0; i < cards.length; i++) {
+    cards[i] = s.rect(0, 0, 202, 164, cp[i][4], cp[i][5]).attr({
+      fill: (i % 2 == 0) ? colors[0] : colors[1],
+      // filter: shadow
+    }).transform(rotationDegrees[i]);
+  }
+}
+
 function rotate(angle) {
   for (var i = 0; i < cards.length; i++) {
     cards[i].animate({
@@ -78,11 +87,11 @@ function animationSequence() {
 }
 
 function animate() {
-  setTimeout(function() { rotate("r0"); }, 1000);
-  setTimeout(function() { changeSize(); }, 2200);
-  setTimeout(function() { rotate(); }, 3400);
-  setTimeout(function() { changeToOriginal(); }, 4500);
+  // setTimeout(function() { changeSize(); }, 1000);
+  // setTimeout(function() { rotate("r0"); }, 2200);
+  // setTimeout(function() { rotate(); }, 3400);
+  setTimeout(function() { changeToOriginal(); }, 1000);
 }
 
-createCards();
+createCards2();
 animate()
