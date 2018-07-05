@@ -101,3 +101,10 @@ _deckoLogo.animateSequence = function() {
   setTimeout(function() { $this.rotate(); }, 1000);
   setTimeout(function() { $this.changeToOriginal(); }, 2500);
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var logo = new deckoLogo();
+  logo.createlogoCards();
+  logo.animateSequence();
+}, false);
