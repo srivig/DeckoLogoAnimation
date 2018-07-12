@@ -97,12 +97,11 @@ _deckoLogo.changeToOriginal = function() {
 
 _deckoLogo.animateSequence = function() {
   var $this = this;
-  setTimeout(function() {
-    $this.rotate();
-  }, 1000);
-  setTimeout(function() {
-    $this.changeToOriginal();
-  }, 2500);
+
+
+  setTimeout(function() { $this.rotate(); }, 1000);
+  setTimeout(function() { $this.changeToOriginal(); }, 2500);
+
   // setTimeout(function() { $this.changeSize(); }, 1000);
   // setTimeout(function() { $this.rotate("r0"); }, 2200);
   // setTimeout(function() { $this.rotate(); }, 3400);
